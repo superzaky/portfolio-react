@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Layout from "./components/Layout";
+import About from "./components/About";
 import Particles from "react-particles-js";
 
 function App() {
@@ -26,12 +27,12 @@ function App() {
 	                  value: 3,
                     color:"#ff7d92"
 	                },
-                  // line_linked: {
-                  //   color: "#47bab7",
-                  //   size:1,
-                  //   opacity:100
-                  //   // width:1
-            			// },
+                  line_linked: {
+                    color: "#ff7d92",
+                    size:1,
+                    opacity:100
+                    // width:1
+            			},
           
                   shape: {
                       type: 'circle',
@@ -51,7 +52,7 @@ function App() {
               }
           }} 
       />
-      <Layout/>
+      <About/>
     </>
   );
 }
