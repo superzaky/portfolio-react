@@ -10,7 +10,7 @@ const Header = () => {
                     <div class="row">
                         <div class="col-lg-5">
                             <div className="header-content">
-                                <h1>Web development and websites</h1>
+                                <h1 className="header-title">Web development and websites</h1>
                                 <Typed
                                     className="typed-text"
                                     strings={["Web Design", "Web Development", "Software Development", "Software Architecture"]}
@@ -19,6 +19,11 @@ const Header = () => {
                                     loop
                                 />
                             </div>
+                            <div class="home__social">
+                                <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i>asd</a>
+                                <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i>asd</a>
+                                <a href="" class="home__social-icon"><i class='bx bxl-github' ></i>asd</a>
+                            </div>
                         </div>
 
                         <div class="col-lg-1">
@@ -26,7 +31,7 @@ const Header = () => {
                         </div>
                         <div class="col-lg-6">
                             <div className="header-image">
-                                <img src={logo} className="img-fluid" alt="Responsive image"></img>
+                                <img src={logo} className="img-header img-fluid" alt="Responsive image"></img>
                             </div>
                         </div>
 

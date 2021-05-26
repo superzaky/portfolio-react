@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 :root {
   --primary-green:#47bab7;
@@ -10,6 +9,16 @@
   --big-font-size: 3.5rem;
   --h2-font-size: 2rem;
   --font-semi: 600;
+
+}
+
+#root {
+  position: relative;
+  padding-bottom: 500px;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,21 +41,12 @@ nav a.nav-link {
   cursor: pointer;
 }
 
-nav ul li {
-}
-
 .navbar-nav > li > a {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-green) !important;
   border-bottom: 0.1875rem solid var(--primary-color-navbar);
 }
-
-/* .navbar-brand {
-  max-width: 17.25rem;
-  padding: 0 !important;
-  height: 6rem !important;
-} */
 
 @media(max-width: 768px) {
  .navbar-brand {
@@ -75,15 +75,15 @@ nav ul li {
 
 .about-wrapper {
   right: 5%;
-  /* z-index: 2; put .gold-box above .green-box and .dashed-box */
+  /* z-index: 2; */
+ 
   position: absolute;
-  top:800px;
+  top:600px;
   background-color:rgba(255, 255, 255, 0.1);
-
   margin-right: 100px;
   margin-left: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .about-title{
@@ -103,6 +103,7 @@ nav ul li {
   padding-top: 6.25rem;
 }
 .about-info {
+  margin-top: 4rem;
   font-family: var(--body-font);
 }
 
@@ -119,7 +120,7 @@ nav ul li {
   align-items: center;
   text-align: center;
   font-family: var(--body-font);
-
+  margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
  
@@ -168,4 +169,22 @@ nav ul li {
   .particles-canvas {
     display: none;
   }
+}
+
+/* ===== FOOTER =====*/
+.footer{
+  position: absolute;
+  right: 0;
+  bottom:0;
+  left:0;
+
+  background-color: #0E2431;
+  color: #fff;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
+}
+
+.footer_title{
+  font-size: 2rem;
 }

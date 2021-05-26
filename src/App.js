@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Layout from "./components/Layout";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import Particles from "react-particles-js";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           }} 
       />
       <About/>
+      <Footer/>
     </>
   );
 }
