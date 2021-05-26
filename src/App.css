@@ -131,6 +131,30 @@ nav a.nav-link {
 }
 
 
+.home_social{
+  margin-top: 5rem;
+  padding-top: 0;
+  padding-bottom: 2.5rem;
+  flex-direction: row;
+  align-self: flex-end;
+  flex-direction: row;
+}
+
+.home_social-icon:hover{
+  color: var(--primary-rose);
+}
+
+.home_social-icon{
+  margin-bottom: 0;
+  margin-right: 2rem;
+
+  width: max-content;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-green);
+}
+
+
 .main-info h1 {
   color: var(--primary-green);
   font-size: var(--big-font-size);
