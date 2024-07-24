@@ -74,8 +74,6 @@ nav a.nav-link {
   margin-top: 4.0625rem;
 }
 
-
-
 .about-wrapper {
   right: 5%;
   /* z-index: 2; */
@@ -101,9 +99,7 @@ nav a.nav-link {
   float:left;
   margin-right: 9.375rem;
 }
-.about_content {
-  padding-top: 6.25rem;
-}
+
 .about-info {
   margin-top: 4rem;
   font-family: var(--body-font);
@@ -193,7 +189,7 @@ nav a.nav-link {
 }
 
 .block div {
-  padding: 50px;
+  /* padding: 50px; */
   grid-row-start: 1;
   grid-column-start: 1;
  }
@@ -209,7 +205,7 @@ nav a.nav-link {
   clear: both;
   position: relative;
   height: 200px;
-  margin-top: -200px;
+  margin-top: 10px;
   z-index: 2;
   /* 
   right: 0;
