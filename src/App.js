@@ -13,47 +13,49 @@ function App() {
 
       <Navbar/>
       <Header/>
-      <Particles
-      className="particles-canvas"
-        params={{
-              particles: {
-                  number: {
-                    value: 30,
-                    density: {
-                      enable: true,
-                      value_area: 900
+      <div class="block">
+        <Particles
+        className="particles-canvas"
+          params={{
+                particles: {
+                    number: {
+                      value: 30,
+                      density: {
+                        enable: true,
+                        value_area: 900
+                      }
+                    },
+                    size: {
+                      value: 3,
+                      color:"#ff7d92"
+                    },
+                    line_linked: {
+                      color: "#ff7d92",
+                      size:1,
+                      opacity:100
+                      // width:1
+                    },
+            
+                    shape: {
+                        type: 'circle',
+                        stroke: {
+                          width: 6,
+                          color:"#f9ab00"
+                        }
                     }
-                  },
-                  size: {
-	                  value: 3,
-                    color:"#ff7d92"
-	                },
-                  line_linked: {
-                    color: "#ff7d92",
-                    size:1,
-                    opacity:100
-                    // width:1
-            			},
-          
-                  shape: {
-                      type: 'circle',
-                      stroke: {
-                        width: 6,
-                        color:"#f9ab00"
-                      }
-                  }
-              },
-              interactivity: {
-                      events: {
-                          onhover: {
-                              enable: true,
-                              mode: "repulse"
-                          }
-                      }
-              }
-          }} 
-      />
-      <About/>
+                },
+                interactivity: {
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: "repulse"
+                            }
+                        }
+                }
+            }} 
+        />
+        <About/>
+      </div>
       <Footer/>
     </>
   );
