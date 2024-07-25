@@ -34,7 +34,7 @@ const ParticlesComponent = (props) => {
     () => ({
       background: {
         color: {
-          value: "#ff7d92",
+          value: "#FFFFFF",
         },
       },
       fpsLimit: 120,
@@ -59,16 +59,20 @@ const ParticlesComponent = (props) => {
           },
         },
       },
+      fullScreen: {
+        enable: false,
+        zIndex: 0
+    },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: "#ff7d92",
         },
         links: {
-          color: "#FFFFFF",
+          color: "#ff7d92",
           distance: 150,
           enable: true,
           opacity: 0.3,
-          width: 1,
+          width: 2,
         },
         move: {
           direction: "none",
@@ -84,16 +88,16 @@ const ParticlesComponent = (props) => {
           density: {
             enable: true,
           },
-          value: 150,
+          value: 250,
         },
         opacity: {
-          value: 1.0,
+          value: 5.0,
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 2, max: 3 },
         },
       },
       detectRetina: true,
@@ -101,8 +105,23 @@ const ParticlesComponent = (props) => {
     [],
   );
 
+  return (
+      <div className="particles-wrapper">
+          <div className="">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div className="particles-container">
+                              <Particles id={props.id} className="custom-particle" init={particlesLoaded} options={options} />
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+      )
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
 };
 
 export default ParticlesComponent;
