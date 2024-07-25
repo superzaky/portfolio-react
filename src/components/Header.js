@@ -1,5 +1,5 @@
 import React from 'react';
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 import logo from "../logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faMedium } from '@fortawesome/free-brands-svg-icons';
@@ -13,7 +13,7 @@ const Header = () => {
                         <div class="col-lg-5">
                             <div className="header-content">
                                 <h1 className="header-title">Web development and websites</h1>
-                                <Typed
+                                <ReactTyped
                                     className="typed-text"
                                     strings={["Web Design", "Web Development", "Software Development", "Software Architecture"]}
                                     typeSpeed={40}
@@ -42,4 +42,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

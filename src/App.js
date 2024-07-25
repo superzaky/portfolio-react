@@ -5,7 +5,8 @@ import Header from "./components/Header";
 import Layout from "./components/Layout";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import Particles from "react-particles-js";
+//import Particles, { initParticlesEngine } from "@tsparticles/react";
+import ParticlesComponent from './components/particles';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
       <Navbar/>
       <Header/>
       <div class="block">
-        <Particles
-        className="particles-canvas"
+        <ParticlesComponent id="particles"  className="particles-canvas"/>
+        {/* <Particles className="particles-canvas"
           params={{
                 particles: {
                     number: {
@@ -53,7 +54,7 @@ function App() {
                         }
                 }
             }} 
-        />
+        /> */}
         <About/>
       </div>
       <Footer/>
