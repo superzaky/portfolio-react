@@ -6,6 +6,8 @@ import Layout from "./components/Layout";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import ParticlesComponent from './components/Particles';
+import Portfolio from "./components/Portfolio";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -21,5 +23,14 @@ function App() {
     </>
   );
 }
-
+function NoMatch() {
+  return (
+    <div>
+      <h2>Nothing to see here!</h2>
+      <p>
+        <Link to="/">Go to the home page</Link>
+      </p>
+    </div>
+  );
+}
 export default App;
