@@ -12,17 +12,29 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Header/>
-      <div class="block">
-         <ParticlesComponent id="particles"  className="particles-canvas"/>
-        <About/>
-        
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<About />} />
+          <Route path="about" element={<About />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
+      <div className="block">
+        <ParticlesComponent id="particles" className="particles-canvas" />
+        <About />
       </div>
-      <Footer/>
+      <Footer />
+            {/* An <Outlet> renders whatever child route is currently active,
+          so you can think about this <Outlet> as a placeholder for
+          the child routes we defined above. */}
+          <Outlet />
     </>
   );
 }
+
 function NoMatch() {
   return (
     <div>
@@ -33,4 +45,5 @@ function NoMatch() {
     </div>
   );
 }
+
 export default App;

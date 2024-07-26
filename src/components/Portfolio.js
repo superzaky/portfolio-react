@@ -12,7 +12,7 @@ const Portfolio = () => {
                                
                             </div>
                             <div className="header-image">
-                                <img src={perfil} className="img-about img-fluid" alt="Responsive image"></img>
+                               <p>blalblalblalblalb</p>
                             </div>
                         </div>
                       
