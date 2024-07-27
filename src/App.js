@@ -1,38 +1,32 @@
+import React, { useRef } from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Layout from "./components/Layout";
-import About from "./components/About";
 import Footer from "./components/Footer";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Portfolio from "./components/Portfolio";
-import { Routes, Route, Link } from "react-router-dom";
+import Layout from "./components/Layout";
 
 function App() {
+  const aboutRef = useRef(null);
+  const navigate = useNavigate();
+  const scrollToAbout = (value) => {
+    navigate('/#'+ value); 
+  };
+
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Layout />}>
+      <Navbar handleLinkClick={scrollToAbout} />
+        <Routes>
+          <Route path="/" element={<Layout />} />
           <Route index element={<Header />} />
-          <Route path="about" element={<About />} />
+          <Route path="about" element={<Header ref={aboutRef} />} />
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path="*" element={<NoMatch />} />
-        </Route>
-      </Routes>
-      <Footer />
+          <Route path="*" element={<Header />} />
+        </Routes>
+        <Footer />
     </>
-  );
-}
-
-function NoMatch() {
-  return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to="/">Go to the home page</Link>
-      </p>
-    </div>
   );
 }
 

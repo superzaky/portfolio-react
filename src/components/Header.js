@@ -3,13 +3,12 @@ import { ReactTyped } from "react-typed";
 import logo from "../logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faMedium } from '@fortawesome/free-brands-svg-icons';
-import perfil from "../react_Zaky.png";
 import About from "./About";
 
 const Header = () => {
     return (
         <>
-            <div className="header-wrapper">
+            <div className="header-wrapper" id="home-wrapper">
                 <div className="main-info">
                     <div class="container">
                         <div class="row">
@@ -41,7 +40,6 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            
             </div>
             <About/>
         </>
