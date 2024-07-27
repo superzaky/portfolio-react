@@ -10,9 +10,9 @@ const Header = () => {
         <>
             <div className="header-wrapper" id="home-wrapper">
                 <div className="main-info">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-5">
                                 <div className="header-content">
                                     <h1 className="header-title">Web development and websites</h1>
                                     <ReactTyped
@@ -23,15 +23,15 @@ const Header = () => {
                                         loop
                                     />
                                 </div>
-                                <div class="home_social">
-                                    <a href="https://github.com/superzaky" target="_blank" class="home_social-icon"><FontAwesomeIcon icon={faGithub} /></a>
-                                    <a href="https://twitter.com/zakyhuraibi" target="_blank" class="home_social-icon"><FontAwesomeIcon icon={faTwitter} /></a>
-                                    <a href="https://medium.com/@zakyhuraibi" target="_blank" class="home_social-icon"><FontAwesomeIcon icon={faMedium} /></a>
+                                <div className="home_social">
+                                    <a href="https://github.com/superzaky" target="_blank" className="home_social-icon"><FontAwesomeIcon icon={faGithub} /></a>
+                                    <a href="https://twitter.com/zakyhuraibi" target="_blank" className="home_social-icon"><FontAwesomeIcon icon={faTwitter} /></a>
+                                    <a href="https://medium.com/@zakyhuraibi" target="_blank" className="home_social-icon"><FontAwesomeIcon icon={faMedium} /></a>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
+                            <div className="col-lg-1">
                             </div>
-                            <div class="col-lg-6">
+                            <div className="col-lg-6">
                                 <div className="header-image">
                                     <img src={logo} className="img-header img-fluid" alt="Responsive image"></img>
                                 </div>
