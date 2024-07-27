@@ -1,6 +1,29 @@
-import React from 'react'
+// import React from 'react'
+import React, { useState, useEffect } from "react";
 import perfil from "../react_Zaky.png";
+import projectsData from './data/projects.json'; 
 const Portfolio = () => {
+    const [projects, setProjects] = useState([]);
+    const [editing, setEditing] = useState(false);
+    const initialFormState = {
+        _id: '',
+        user: '',
+        name: '',
+        content: '',
+        projectType: '',
+        image: {
+            link: ''
+        },
+        images: []
+    };
+    const [currentProject, setCurrentProject] = useState(initialFormState);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [projectsPerPage] = useState(9);
+
+    useEffect(() => {
+        setProjects(projectsData);
+    }, []);
+
     return (
         <div className="block">
             <div className="header-wrapper">
