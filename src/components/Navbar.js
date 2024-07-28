@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import ScrollReveal from 'scrollreveal';
 import { Link } from "react-router-dom";
 
-/*===== SCROLL REVEAL ANIMATION =====*/
+/*===== SCROLL REVEAL ANIMATION=====*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '40px',
