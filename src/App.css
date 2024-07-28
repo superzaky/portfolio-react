@@ -216,6 +216,10 @@ nav a.nav-link {
   max-width: 100%;
 }
 
+.page-header {
+  margin-top: 130px;
+}
+
 .particles-container {
   display: block;
   margin: 0 auto;
@@ -231,6 +235,18 @@ nav a.nav-link {
   margin-bottom: 25px;
   max-height: 350px;
   height: 350px;
+}
+
+.project-content ul li {
+  list-style: initial;
+}
+
+.project-content ol li {
+  list-style: decimal;
+}
+
+.project-equal-height {
+  max-height: 700px;
 }
 
 /* ===== FOOTER =====*/

@@ -12,10 +12,23 @@ const ProjectDetail = () => {
 
     return (
         <div className="container">
-            <h1>{project.name}</h1>
-            <img src={project.images[0]?.link} alt={project.name} />
-            <p>{project.content}</p>
-            {/* You can add more details here */}
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 className="page-header">{project.name}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    {project.images && project.images.length > 0 && (
+                        <img className="img-fluid project-equal-height mx-auto" src={project.images[0].link} alt={project.name} />
+                    )}
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Project description</h3>
+                    <div className="project-content" dangerouslySetInnerHTML={{ __html: project.content }} />
+                </div>
+            </div>
         </div>
     );
 };

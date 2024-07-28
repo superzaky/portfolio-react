@@ -47,7 +47,7 @@ const Portfolio = () => {
                                 <div key={project._id.$oid} className="col-lg-4 col-md-6 col-sm-6 col-xs-12 project-item">
                                     <Link to={`/project/${project._id.$oid}`}>
                                         {project.images && project.images.length > 0 && (
-                                            <img className="img-responsive equal-height" src={project.images[0].link} alt={project.name} />
+                                            <img className="img-fluid equal-height" src={project.images[0].link} alt={project.name} />
                                         )}
                                     </Link>
                                     <h3>
