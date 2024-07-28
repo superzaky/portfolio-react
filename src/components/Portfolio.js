@@ -1,23 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import perfil from "../react_Zaky.png";
-import projectsData from '../data/projects.json'; // Adjust the path as necessary
+import projectsData from '../data/projects.json';
 import Pagination from "./Pagination";
 
 const Portfolio = () => {
     const [projects, setProjects] = useState([]);
-    const [editing, setEditing] = useState(false);
-    const initialFormState = {
-        _id: '',
-        user: '',
-        name: '',
-        content: '',
-        projectType: '',
-        image: {
-            link: ''
-        },
-        images: []
-    };
-    const [currentProject, setCurrentProject] = useState(initialFormState);
     const [currentPage, setCurrentPage] = useState(1);
     const [projectsPerPage] = useState(9);
 
@@ -30,7 +18,7 @@ const Portfolio = () => {
     const indexOfLastProject = currentPage * projectsPerPage;
     const indexOfFirstProject = indexOfLastProject - projectsPerPage;
     const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
-    // change page
+        // change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     const truncateName = (name) => {
@@ -45,7 +33,6 @@ const Portfolio = () => {
             content = content.replace(/&amp;/g, '&');
             //Content trimmed to 6 characters
             content = content.substring(0, Math.min(45)) + '...';
-
             return content;
         }
     };
@@ -58,15 +45,16 @@ const Portfolio = () => {
                         <div className="row">
                             {currentProjects.map(project => (
                                 <div key={project._id.$oid} className="col-lg-4 col-md-6 col-sm-6 col-xs-12 project-item">
-                                <a>
-                                    {project.images && project.images.length > 0 && (
-                                        <img className="img-responsive equal-height" src={project.images[0].link} alt={project.name} />
-                                    )}
-                                </a>
+                                    <Link to={`/project/${project._id.$oid}`}>
+                                        {project.images && project.images.length > 0 && (
+                                            <img className="img-responsive equal-height" src={project.images[0].link} alt={project.name} />
+                                        )}
+                                    </Link>
                                     <h3>
-                                        <a className="project-name">{truncateName(project.name)}</a>
+                                        <Link to={`/project/${project._id.$oid}`} className="project-name">{truncateName(project.name)}</Link>
                                     </h3>
                                     <p>{removeHTMLTags(project.content)}</p>
+                                    <Link to={`/project/${project._id.$oid}`} className="btn btn-primary btn-custom">More info <span className="glyphicon glyphicon-chevron-right"></span></Link>
                                 </div>
                             ))}
                         </div>
@@ -80,6 +68,6 @@ const Portfolio = () => {
             />
         </div>
     );
-}
+};
 
 export default Portfolio;

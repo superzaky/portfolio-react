@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Portfolio from "./components/Portfolio";
 import Layout from "./components/Layout";
+import ProjectDetail from "./components/ProjectDetail";
 
 function App() {
   const aboutRef = useRef(null);
@@ -18,14 +19,15 @@ function App() {
   return (
     <>
       <Navbar handleLinkClick={scrollToAbout} />
-        <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route index element={<Header />} />
-          <Route path="about" element={<Header ref={aboutRef} />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="*" element={<Header />} />
-        </Routes>
-        <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route index element={<Header />} />
+        <Route path="about" element={<Header ref={aboutRef} />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="project/:id" element={<ProjectDetail />} />
+        <Route path="*" element={<Header />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
