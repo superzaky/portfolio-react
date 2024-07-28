@@ -115,7 +115,7 @@ const ParticlesComponent = (props) => {
                               <Particles id={props.id} className="custom-particle" init={particlesLoaded} options={options} />
                           </div>
                       </div>
-                      
+
                   </div>
               </div>
           </div>
