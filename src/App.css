@@ -220,6 +220,12 @@ nav a.nav-link {
   left: 0;
 }
 
+.project-item {
+  margin-bottom: 25px;
+  max-height: 350px;
+  height: 350px;
+}
+
 /* ===== FOOTER =====*/
 .footer{
   clear: both;
