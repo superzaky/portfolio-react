@@ -209,6 +209,12 @@ nav a.nav-link {
   justify-content: center;
 }
 
+.equal-height {
+  margin: auto;
+  max-height: 150px;
+  height: 150px;
+}
+
 .particles-container {
   display: block;
   margin: 0 auto;

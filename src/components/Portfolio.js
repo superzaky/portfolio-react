@@ -1,8 +1,8 @@
-// import React from 'react'
 import React, { useState, useEffect } from "react";
 import perfil from "../react_Zaky.png";
 import projectsData from '../data/projects.json'; // Adjust the path as necessary
 import Pagination from "./Pagination";
+
 const Portfolio = () => {
     const [projects, setProjects] = useState([]);
     const [editing, setEditing] = useState(false);
@@ -26,15 +26,29 @@ const Portfolio = () => {
         setProjects(projectsData);
     }, []);
 
-    // console.log('project ', projects);
-
     // pagination
     const indexOfLastProject = currentPage * projectsPerPage;
     const indexOfFirstProject = indexOfLastProject - projectsPerPage;
     const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
     // change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
-    
+
+    const truncateName = (name) => {
+        return name.length > 24 ? name.substring(0, 24) + '...' : name;
+    };
+
+    const removeHTMLTags = (content) => {
+        if (content) {
+            //Content without HTML tags
+            content = content.replace(/<\/?[^>]+>/gi, "");
+            //make your replace global with the /g modifier on a regex, otherwise it will only replace the first instance of &amp;
+            content = content.replace(/&amp;/g, '&');
+            //Content trimmed to 6 characters
+            content = content.substring(0, Math.min(45)) + '...';
+
+            return content;
+        }
+    };
 
     return (
         <div className="block">
@@ -44,14 +58,15 @@ const Portfolio = () => {
                         <div className="row">
                             {currentProjects.map(project => (
                                 <div key={project._id.$oid} className="col-lg-4 col-md-6 col-sm-6 col-xs-12 project-item">
-                                    
+                                <a>
+                                    {project.images && project.images.length > 0 && (
+                                        <img className="img-responsive equal-height" src={project.images[0].link} alt={project.name} />
+                                    )}
+                                </a>
                                     <h3>
-                                        <a class="project-name"> {project.name} </a>
+                                        <a className="project-name">{truncateName(project.name)}</a>
                                     </h3>
-                                    {/* <p dangerouslySetInnerHTML={{ __html: project.content }}></p>
-                                            {project.images && project.images.length > 0 && (
-                                                <img src={project.images[0].link} alt={project.name} />
-                                            )} */}
+                                    <p>{removeHTMLTags(project.content)}</p>
                                 </div>
                             ))}
                         </div>
