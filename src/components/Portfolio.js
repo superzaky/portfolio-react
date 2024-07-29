@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import perfil from "../react_Zaky.png";
 import projectsData from '../data/projects.json';
 import Pagination from "./Pagination";
 
