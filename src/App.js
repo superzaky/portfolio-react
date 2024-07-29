@@ -13,7 +13,7 @@ function App() {
   const aboutRef = useRef(null);
   const navigate = useNavigate();
   const scrollToAbout = (value) => {
-    navigate('/#'+ value); 
+    navigate('/#' + value);
   };
 
   return (
@@ -31,5 +31,4 @@ function App() {
     </>
   );
 }
-
 export default App;

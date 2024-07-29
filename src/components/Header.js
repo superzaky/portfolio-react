@@ -8,7 +8,7 @@ import About from "./About";
 const Header = () => {
     return (
         <>
-            <div className="header-wrapper" id="home-wrapper">
+            <div className="header-wrapper" id="home">
                 <div className="main-info">
                     <div className="container">
                         <div className="row">
